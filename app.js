@@ -43,6 +43,6 @@ app.get("/work", (req,res) => {
   res.render("index", {getDate: day, itemData: workFood });
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log("Server is running on port " + port);
 });
